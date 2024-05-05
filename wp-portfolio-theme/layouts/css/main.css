@@ -1,0 +1,971 @@
+/*
+ * Theme Name: DesignFly
+ *
+ * Layout: Main(custom) Styles
+*/
+
+/*************************************************************************************
+------------------------------------- TABLE OF CONTENT: ------------------------------
+**************************************************************************************
++ Generics
+    + Header(masthead) Styles 
+    + Features bar Styles
+    + Footer Styles
++ Home(front-page) styles
+    + Header image styles
+    + portfolio Section(home)
++ Portfolio Template Styles
++ Blog Template Styles
+    + Blog template part styles
++ Single Post Styles
++ Archive Styles
++ Search.php styles
++ 404 Styles(404.php)
+--------------------------------------------------------------*/
+
+
+/*************************************************************************************
+---------------------------------------- Generics -------------------------------------
+**************************************************************************************/
+
+html {
+    font-size: 14px;
+}
+
+
+/*************************************************
+------------ Header(masthead) Styles -------------
+*************************************************/
+#masthead {
+    min-height: 105px;
+    background-color: #f4f4f4;
+    background-repeat: repeat;
+}
+
+#masthead .navbar {
+    padding: 0;
+}
+
+#masthead .custom-logo-link {
+    padding: 20px 0;
+}
+
+#masthead .custom-logo-link img {
+    max-width: 100%; 
+    max-height: 100%;
+    height: auto;
+}
+
+#masthead .navbar-nav {
+    margin-left: auto;
+    margin-right: 50px !important;
+}
+
+#masthead #primary-menu {
+    list-style-type: none;
+}
+
+#masthead #primary-menu ul {
+    list-style-type: none;
+}
+
+#masthead #primary-menu li {
+    margin-right: 5px;
+    float: left;
+}
+
+#masthead #primary-menu li a {
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    font-size: 1rem;
+    padding: 10px;
+    color: #222222;
+}
+
+#masthead #primary-menu li a:hover {
+    text-decoration: none;
+}
+
+#masthead #primary-menu li:hover a,
+#masthead #primary-menu li.active a {
+    background-color: #ef4634;
+    border-radius: 3px;
+    color: #FFF;
+}
+
+#masthead .navbar .search-box {
+    width: 150px;
+    height: 20px;
+    border-radius: 3px;
+    border: 1px solid #62585f;
+    margin-right: 5px;
+}
+
+#masthead .navbar .search-btn {
+    cursor: pointer;
+}
+
+/************************************************
+------------- Features bar Styles ---------------
+*************************************************/
+.features-wrapper {
+    min-height: 101px;
+    background-image: url('../../assets/images/features-repeatable-bg.png');
+    background-repeat: repeat;
+}
+
+.features-wrapper .features-container,
+.features-wrapper .features-container .row {
+    height: 100%;
+    width: 100%;
+}
+
+.features-container .row .col-sm-4 {
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.features-wrapper .thumbnail {
+    overflow: hidden;
+    min-height: 50px;
+    min-width: 50px;
+}
+
+.features-wrapper .thumbnail img {
+    border-radius: 50%;
+}
+
+.features-wrapper .content {
+    margin-left: 10px;
+    display: inline-block;
+    width: 77%;
+}
+
+.features-wrapper .content .title {
+    margin: 10px 0 5px 0;
+    font-size: 1.5rem;
+    font-weight: bold; 
+    color: #ef4634;
+}
+
+.features-wrapper .content .description {
+    line-height: 1.4rem;
+    font-size: 0.9rem;
+    color: #333333;
+}
+
+/************************************************
+--------------- Footer Styles ------------------
+*************************************************/
+#footer-wrapper .content .info .title,
+#footer-wrapper .content .contact-us .title {
+    font-size: 1.8rem;
+    color: #62585f;
+    text-shadow: 2px 0 #fff;
+    margin-bottom: 10px;
+}    
+
+#footer-wrapper .title a {
+    color: #62585f;
+}    
+
+#footer-wrapper .title a:hover {
+    text-decoration: none;
+}    
+
+#footer-wrapper .content .info .para,
+#footer-wrapper .content .contact-us .address,
+#footer-wrapper .content .contact-us .email {
+    font-size: 1rem;
+    color: #62585f;
+    line-height: 1.5rem;
+    margin-bottom: 10px;
+}    
+
+#footer-wrapper .content .contact-us .email {
+    display: inline-block;
+    color: #ef4634;
+}    
+
+#footer-wrapper .content .info .read-more {
+    display: block;
+    color: #ef4634;
+    margin-top: 10px;
+}    
+
+#footer-wrapper .contact-us .social-media {
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}    
+
+#footer-wrapper .contact-us .social-media li {
+    margin: 0 2px;
+}    
+
+#footer-wrapper .contact-us .social-media li:first-child {
+    margin-left: 0;
+}    
+
+#footer-wrapper hr.bar {
+    margin: 20px 0 0 0;
+    background: #62585f;
+    height: 1px;
+}    
+
+#footer-wrapper hr:first-child {
+    margin-bottom: 20px;
+}    
+
+#footer-wrapper .site-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}    
+
+#footer-wrapper .site-info p {
+    display: inline-block;
+    margin: 10px 0 20px 0;
+    font-size: 14px;
+    color: #62585f;
+}    
+
+#footer-wrapper a {
+    color: #ef4634;
+}    
+
+/*************************************************************************************
+-------------------------------- Home(front-page) styles -----------------------------
+**************************************************************************************/
+
+/********************************************
+------------ Header image styles -------------
+*********************************************/
+#intro-container {
+    position: relative;
+    height: 544px;
+    width: 100%;
+}
+
+#intro-container .header-img {
+    height: 100%;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+}
+
+#intro-container .content {
+    position: absolute;
+    bottom: 50px; left: 50%;
+    transform: translate(-50%, 0);
+}
+
+#intro-container .content .site-title,
+#intro-container .content .site-description {
+    font-family: sans-serif;
+    text-align: center;
+    margin: 0;
+    color: #FFF;
+}
+
+#intro-container .content .site-title {
+    margin-bottom: 20px;
+    font-size: 5rem;
+    text-shadow: 2px 2px #950904;
+}
+
+#intro-container .content .site-title a {
+    color: #FFf;
+}
+
+#intro-container .content .site-title a:hover {
+    text-decoration: none;
+}
+
+#intro-container .content .site-description {
+    font-size: 1.1rem;
+    line-height: 1.8rem;
+}
+
+hr.break {
+    margin: 0;
+    height: 3px;
+    background-color: #FFF;
+}
+
+/************************************************
+----------- portfolio Section(home) -------------
+*************************************************/
+#portfolio-wrapper_home {
+    margin: 50px auto;
+    display: -ms-grid;
+    display: -moz-grid;
+    display: grid;
+    -ms-grid-columns: 300px 300px 300px;
+    grid-template-columns: 300px 300px 300px;
+    column-gap: 15px;
+    row-gap: 15px;
+    justify-content: center;
+}
+
+/* top and bottom bars */
+#portfolio-wrapper_home .portfolio-wrapper_home-top,
+#portfolio-wrapper_home .portfolio-wrapper_home-bottom {
+    grid-column: 1/4;
+    margin: 5px 0;
+}
+
+#portfolio-wrapper_home .portfolio-wrapper_home-top .title {
+    display: inline-block;
+    font-family: 'Open Sans', sans-serif;
+    color: #63585f;
+    font-size: 3rem;
+    text-shadow: 2px 0 #ffffff;
+    margin-bottom: 0;
+    text-transform: uppercase;
+}
+
+#portfolio-wrapper_home #portfolio-view-all {
+    float: right;
+    padding: 10px;
+    border-radius: 3px;
+    background-color: #222222;
+    font-size: 1.1rem;
+    color: #fff;
+    margin-top: 10px; /* can't find other way to do it */
+}
+
+#portfolio-wrapper_home #portfolio-view-all:hover {
+    background-color: #ef4634;
+    text-decoration: none;
+}
+
+#portfolio-wrapper_home div[class^="portfolio-wrapper_home-"]>hr {
+    margin: 0;
+    background: #62585f;
+    height: 1px;
+}
+
+#portfolio-wrapper_home>div[class^="post-"] {
+    position: relative;
+    height: 210px;
+    width: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#portfolio-wrapper_home>div[class^="post-"] .view-image {
+    display: none;
+}
+
+#portfolio-wrapper_home .post-thumbnail img {
+    object-fit: cover;
+    object-position: center;
+    -moz-transition: 0.3s transform ease-out;
+    transition: 0.3s transform ease-out; 
+}
+
+#portfolio-wrapper_home>div[class^="post-"]:hover .post-thumbnail img {
+    -moz-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+/*************************************************************************************
+-------------------------------- Portfolio Template Styles ---------------------------
+**************************************************************************************/
+#portfolio-wrapper {
+    margin: 50px auto;
+    display: -ms-grid;
+    display: -moz-grid;
+    display: grid;
+    -ms-grid-columns: 300px 300px 300px;
+    grid-template-columns: 300px 300px 300px;
+    column-gap: 15px;
+    row-gap: 15px;
+    justify-content: center;
+}
+
+#portfolio-wrapper .portfolio-wrapper-top {
+    grid-column: 1/4;
+    margin: 5px 0;
+}
+
+#portfolio-wrapper .portfolio-wrapper-top hr {
+    margin: 10px 0 20px 0;
+    background: #62585f;
+    height: 1px;
+}
+
+#portfolio-wrapper .portfolio-wrapper-top .title {
+    display: inline-block;
+    font-family: 'Open Sans', sans-serif;
+    color: #63585f;
+    font-size: 3rem;
+    text-shadow: 2px 0 #ffffff;
+    margin-bottom: 0;
+    text-transform: uppercase;
+}
+
+#portfolio-wrapper>div[class^="post-"] {
+    cursor: pointer;
+    position: relative;
+    height: 210px;
+    width: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#portfolio-wrapper .post-thumbnail img {
+    object-fit: cover;
+    object-position: center;
+    -moz-transition: 0.3s transform ease-out;
+    transition: 0.3s transform ease-out; 
+}
+
+/** Hover effect **/
+
+#portfolio-wrapper .view-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.8);
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    z-index: 1;
+    -moz-transition: 0.3s opacity linear;
+    transition: 0.3s opacity linear;
+}
+
+#portfolio-wrapper .post-title {
+    display: none;
+}
+
+#portfolio-wrapper .view-image span {
+    margin-bottom: 5px;
+    color: #FFF;
+}
+
+#portfolio-wrapper>div[class^="post-"]:hover .post-thumbnail img {
+    -moz-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+#portfolio-wrapper>div[class^="post-"]:hover .view-image {
+    opacity: 1;
+}
+
+/** Pagination styles **/
+#pagination {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#pagination .page-numbers {
+    font-size: 16px;
+    color: #222222;
+    margin: 3px;
+    display: -ms-flexbox;
+    display: flex;
+    height: 30px;
+    width: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+#pagination .page-numbers:hover,
+#pagination .page-numbers.current {
+    text-decoration: none;
+    background-color: #ef4634;
+    color: #FFF;
+    border-radius: 3px;
+}
+
+
+#pagination .page-numbers.dots:hover {
+    text-decoration: none;
+    background-color: initial;
+    color: initial;
+    border-radius: initial;
+}
+
+#pagination .pagination-arrow-left {
+    transform: rotate(-180deg);
+}
+
+#pagination .pagination-current {
+    font-size: 1.1rem;
+    color: #222222;
+}
+
+/** View Image styles **/
+#view-image-container {
+    position: fixed;
+    z-index: 999;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    overflow-y: scroll;
+}
+
+#view-image-container .content-wrapper {
+    position: relative;
+    padding: 20px 20px 0px 20px;
+    background-color: #fff;
+}
+
+#view-image-container .content-wrapper img {
+    border-radius: 5px;
+}
+
+#view-image-container .content-wrapper .post-title {
+    margin: 15px 0;
+    text-align: center;
+}
+
+#view-image-container .content-wrapper .post-title a {
+    font-size: 1.4rem;
+    color: #62585f;
+}
+
+#view-image-container .content-wrapper .post-title a:hover {
+    text-decoration: none;
+    color: #ef4634;
+}
+
+#view-image-container .content-wrapper .close{
+    position: absolute;
+    right: -35px;
+    top: 0;
+    height: 35px;
+    width: 35px;
+    cursor: pointer;
+    color: #62585f;
+    background-color: #FFF;
+    opacity: 1;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/*************************************************************************************
+--------------------------------- Blog Template Styles ------------------------------
+**************************************************************************************/
+#blog-template .header {
+    margin-bottom: 30px;
+}
+
+#blog-template .header>p {
+    font-size: 3.1rem;
+    color: #62585f;
+    text-shadow: 2px 0 #fff;
+    margin: 30px 0 0 0;
+}
+
+#blog-template .header>hr {
+    margin: 0 0 0 0;
+    background: #62585f;
+    height: 1px;
+}
+
+/*********************************************************
+------------------ blog template part styles -------------
+*********************************************************/
+#blog-wrapper article {
+    margin-bottom: 50px;
+}
+
+#blog-wrapper article .permalink:hover {
+    text-decoration: none;
+}
+
+#blog-wrapper article .entry-header {
+    background-color: #222222;
+    color: #FFF;
+    border-radius: 3px;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+}
+
+#blog-wrapper article .entry-header:hover {
+    background-color: #ef4634;
+}
+
+#blog-wrapper article .entry-header .date {
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px 15px;
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+#blog-wrapper article .entry-header .date>span:first-child {
+    font-size: 1.78rem;
+}
+
+#blog-wrapper article .entry-header .date>span:last-child {
+    font-size: 1rem;
+}
+
+#blog-wrapper article .entry-header .entry-title {
+    display: inline-block;
+    font-size: 1.45rem;
+    margin: 0 0 0 20px;
+}
+
+#blog-wrapper article .content {
+    padding: 15px 0;
+}
+
+#blog-wrapper article .content .thumbnail .post-thumbnail {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#blog-wrapper article .content .thumbnail img {
+    max-height: 153px;
+    object-fit: cover;
+    object-position: center;
+}
+
+#blog-wrapper article .content .para .author-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#blog-wrapper article .content .para .author-bar .comments {
+    color: #ef4634;
+}
+
+#blog-wrapper article .content .para {
+    padding-left: 0;
+}
+
+#blog-wrapper article .content .para .author-bar a {
+    color: #ef4634;
+}
+
+#blog-wrapper article .content hr.bar {
+    margin: 0 0 8px 0;
+    background: #62585f;
+    height: 1px;
+}
+
+#blog-wrapper article .content .para .entry-content {
+    margin-top: 0;
+}
+#blog-wrapper article .content .para p {
+    font-size: 1rem;
+    color: #62585f;
+    line-height: 1.7rem;
+    text-align: justify;
+    margin-bottom: 0;
+}
+
+#blog-wrapper article .content .para .read-more {
+    display: block;
+    color: #ef4634;
+    margin-top: 5px;
+}
+
+
+/*************************************************************************************
+-------------------------------- Single Post Styles -----------------------------
+**************************************************************************************/
+#single-post-wrapper {
+    padding-top: 30px;
+}
+
+/** entry header **/
+#single-post-wrapper .entry-header .entry-title {
+    font-size: 2.5rem;
+    color: #62585f;
+    margin-bottom: 10px;
+}
+
+#single-post-wrapper .entry-header .bar {
+    margin: 10px 0 20px 0;
+    background: #62585f;
+    height: 1px;
+}
+
+#single-post-wrapper .entry-header .entry-meta>span,
+#single-post-wrapper .entry-header .posted-on a {
+    font-size: 0.9rem;
+    color: #62585f;
+}
+
+#single-post-wrapper .entry-header .author a {
+    color: #ef4634;
+}
+
+#single-post-wrapper .entry-header .entry-meta .comments {
+    float: right;
+    color: #ef4634;
+}
+
+#single-post-wrapper .post-thumbnail {
+    margin-bottom: 30px;
+}
+
+/** entry content **/
+#single-post-wrapper .entry-content p {
+    font-size: 1rem;
+    line-height: 1.6rem;
+    color: #62585f;
+    text-align: justify;
+}
+
+#single-post-wrapper .entry-content ol,
+#single-post-wrapper .entry-content ul {
+    list-style-type: none;
+    margin: 20px 0;
+    padding: 0;
+}
+
+#single-post-wrapper .entry-content li {
+    margin: 5px 0;
+    text-align: justify;
+}
+
+#single-post-wrapper .entry-content a {
+    color: #ef4634;
+}
+
+#single-post-wrapper .entry-content img {
+    border-radius: 3px;
+}
+
+/** footer styles **/
+#single-post-wrapper .entry-footer .tags-links,
+#single-post-wrapper .entry-footer .cat-links {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    color: #62585f;
+}
+#single-post-wrapper .entry-footer .cat-links a {
+    color: #ef4634;
+}
+#single-post-wrapper .entry-footer .tags-links a {
+    color: #ef4634;
+}
+
+/** comments **/
+#single-post-wrapper .comments-wrapper {
+    margin-top: 50px;
+}
+
+#single-post-wrapper .comments-wrapper .bars {
+    font-size: 1.3rem;
+    color: #62585f;
+}
+
+#single-post-wrapper .comments-wrapper .bars:before,
+#single-post-wrapper .comments-wrapper .bars:after {
+    content: '';
+    height: 1px;
+    width: 100%;
+    display: block;
+    background-color: #62585f;
+    margin: 10px 0;
+}
+
+#single-post-wrapper #comments a {
+    color: #ef4634;
+}
+
+#single-post-wrapper #comments .comment-list {
+    padding: 0;
+    margin: 0;
+}
+
+#single-post-wrapper #comments .comment-list .comment,
+#single-post-wrapper #comments .comment-list .comment-body {
+    overflow: auto;
+}
+
+#single-post-wrapper #comments .vcard,
+#single-post-wrapper #comments .commentmetadata {
+    display: inline-block;
+    color: #62585f;
+    font-size: 0.9rem;
+}
+
+#single-post-wrapper #comments .commentmetadata a {
+    font-size: 0.9rem;
+    color: #62585f;
+}
+
+#single-post-wrapper #comments .commentmetadata .comment-edit-link {
+    color: #ef4634;
+}
+
+#single-post-wrapper #comments .comment-body p {
+    line-height: 1.5rem;
+    font-size: 1rem;
+    color: #62585f;
+    margin-top: 10px;
+}
+
+#single-post-wrapper #comments .comment-body .reply {
+    display: inline-block;
+    float: right;
+}
+
+#single-post-wrapper #comments .comment-body .reply a {
+    color: #ef4634;
+    font-size: 1rem;
+}
+
+#single-post-wrapper #comments .comment-body .reply a:before {
+    font-family: 'dashicons';
+    content: "\f344";
+    color: #ef4634;
+    font-size: 1rem;
+    vertical-align: middle;
+}
+
+#single-post-wrapper .comments-wrapper .bar {
+    height: 1px;
+    width: 100%;
+    background-color: #62585f;
+}
+
+#comments #reply-title,
+#comments .comment-notes,
+#comments .comment-form-comment>label:first-child,
+#comments .comment-form-cookies-consent {
+    display: none;
+}
+
+#comments .comment-form-comment {
+    margin-bottom: 5px;
+}
+
+#comments .comment-form .logged-in-as a {
+    color: #ef4634;
+}
+
+#comments .post-comment {
+    font-size: 1.4rem;
+    color: #62585f;
+    margin-bottom: 5px;
+}
+
+#comments .comment-form-author,
+#comments .comment-form-email,
+#comments .comment-form-url {
+    margin: 0;
+    padding: 0;
+    width: 33.33%;
+    float: left;
+}
+
+#comments .comment-form-author input,
+#comments .comment-form-email input,
+#comments .comment-form-url input {
+    width: 95%;
+}
+
+#comments .form-submit #submit {
+    float: right;
+    padding: 10px;
+    color: #FFF;
+    background-color: #222222;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+/*************************************************************************************
+------------------------------------- Archive Styles ---------------------------------
+**************************************************************************************/
+#archive-wrapper .page-header .page-title {
+    font-size: 2.5rem;
+    color: #62585f;
+    text-shadow: 2px 0 #fff;
+    margin-top: 50px;
+}
+
+#archive-wrapper .page-header .bar {
+    height: 1px;
+    background-color: #62585f;
+    width: 100%;
+}
+
+#archive-wrapper .nav-links a {
+    color: #62585f;
+}
+
+#archive-wrapper .nav-links a:hover {
+    color: #ef4634; 
+    text-decoration: none;
+}
+
+/*************************************************************************************
+------------------------------------- Search.php Styles -------------------------------
+**************************************************************************************/
+#search-wrapper .page-header .page-title {
+    font-size: 2.5rem;
+    color: #62585f;
+    text-shadow: 2px 0 #fff;
+    margin-top: 50px;
+}
+
+#search-wrapper .page-header .bar {
+    height: 1px;
+    background-color: #62585f;
+    width: 100%;
+}
+
+#search-wrapper .nav-links a,
+#page-wrapper .post-edit-link {
+    color: #ef4634;
+}
+
+#search-wrapper .nav-links a:hover {
+    color: #62585f; 
+    text-decoration: none;
+}
+
+
+/*************************************************************************************
+--------------------------------------- 404 Styles -----------------------------------
+**************************************************************************************/
+#not-found-wrapper .page-header .page-title,
+#page-wrapper .entry-header .entry-title {
+    font-size: 2.5rem;
+    color: #62585f;
+    text-shadow: 2px 0 #fff;
+    margin-top: 50px;
+}
+
+#not-found-wrapper .page-header .bar {
+    height: 1px;
+    background-color: #62585f;
+    width: 100%;
+}
+
+#not-found-wrapper form input[type="submit"] {
+    background-color: #222222;
+    color: #FFF;
+    font-size: 0.9rem;
+}

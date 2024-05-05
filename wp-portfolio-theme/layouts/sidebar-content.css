@@ -1,0 +1,150 @@
+/*
+ * Theme Name: DesignFly
+ *
+ * Layout: Sidebar-Content
+*/
+
+
+/********************************************************
+------------------- Sidebar styles ----------------------
+********************************************************/
+#secondary {
+	margin-top: 50px;
+}
+
+#secondary .widget {
+	margin-bottom: 40px;
+}
+
+#secondary .widget-title {
+	position: relative;
+	padding: 0px 0 5px 0;
+	margin-bottom: 10px;
+	font-size: 1.7rem;
+	color: #62585f;
+	text-shadow: 2px 0 #fff;
+}
+
+#secondary .widget-title:before {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 1px;
+	background-color: #62585f;
+}
+
+
+/*************************************************************************************
+-------------------------------- Portfolio Widget Styles -----------------------------
+**************************************************************************************/
+#portfolio-widget-wrapper {
+    margin: 0;
+    display: grid;
+    display: -ms-grid;
+    display: -moz-grid;
+    grid-template-columns: auto auto auto auto;
+    -ms-grid-columns: auto auto auto auto;
+    column-gap: 5px;
+    row-gap: 5px;
+    justify-content: left;
+}
+
+#portfolio-widget-wrapper>div {
+    position: relative;
+    height: 60px;
+    width: 60px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#portfolio-widget-wrapper .post-title {
+	display: none;
+}
+
+#portfolio-widget-wrapper .post-thumbnail img {
+    height: 60px;
+    width: 60px;
+    object-fit: cover;
+    object-position: center;
+}
+
+/** Hover effect **/
+
+#portfolio-widget-wrapper .view-image {
+    display: none;
+}
+
+
+/********************************************************
+----------------- Recent posts widget -------------------
+********************************************************/
+#secondary ul {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+}
+
+#secondary li {
+	margin-bottom: 15px;
+}
+
+#secondary ul li a {
+	display: block;
+	color: #ef4634;
+}
+
+#secondary li .post-date {
+	color: #62585f;
+}
+
+#secondary li .post-date:before {
+	content: 'on ';
+
+}
+
+/********************************************************
+------------------- Archive widget ---------------------
+********************************************************/
+#secondary .widget_archive ul {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+}
+
+#secondary .widget_archive ul li {
+	margin-bottom: 5px;
+}
+
+#secondary .widget_archive li a {
+	font-size: 0.9rem;
+	color: #62585f;
+	display: flex;
+	align-items: center;
+}
+
+#secondary .widget_archive li a:hover {
+	text-decoration: none;
+	color: #ef4634;
+}
+
+#secondary .widget_archive li a:before {
+	content: '';
+	background-image: url('../assets/images/pagination-arrow.png');
+	height: 10px;
+	width: 4px;
+	display: inline-block;
+	background-position: center;
+	background-size: cover;
+	margin-right: 5px;
+}
+
+
+/********************************************************
+------------------- Search widget ---------------------
+********************************************************/
+.widget_search input[type="submit"] {
+	background-color: #222222;
+	color: #fff;
+	font-size: 0.9rem;
+}

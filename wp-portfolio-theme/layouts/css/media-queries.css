@@ -1,0 +1,100 @@
+@media only screen and (min-width: 1200px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media only screen and (max-width: 1142px) {
+    #portfolio-wrapper,
+    #portfolio-wrapper_home {
+        -ms-grid-columns: 300px 300px;
+        grid-template-columns: 300px 300px;
+    }
+
+    #portfolio-widget-wrapper {
+        -ms-grid-columns: auto auto auto;
+        grid-template-columns: auto auto auto;
+    }
+
+    #portfolio-wrapper_home .portfolio-wrapper_home-top {
+        grid-column: 1/3;
+    }
+
+    #portfolio-wrapper .portfolio-wrapper-top {
+        grid-column: 1/3;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    
+    #masthead #primary-menu {
+        margin: 0;
+        padding: 0;
+    }
+
+    #masthead #primary-menu li {
+        float: unset;
+        margin: 10px 0;
+    }
+
+    #masthead #primary-menu li a {
+        width: 100%;
+        padding: 5px;
+    }
+
+    #masthead #primary-menu li:hover a, 
+    #masthead #primary-menu li.active a {
+        background-color: initial;
+        color: initial;
+    }
+
+    #masthead .navbar .form-inline.my-2 {
+        margin-bottom: 20px !important;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    
+    #portfolio-widget-wrapper {
+        -ms-grid-columns: auto auto auto auto;
+        grid-template-columns: auto auto auto auto;
+    }
+}
+
+@media only screen and (max-width: 752px) {
+    #portfolio-wrapper,
+    #portfolio-wrapper_home {
+        -ms-grid-columns: 300px;
+        grid-template-columns: 300px;
+    }
+
+    #portfolio-wrapper_home .portfolio-wrapper_home-top {
+        grid-column: 1/2;
+    }
+
+    #portfolio-wrapper .portfolio-wrapper-top {
+        grid-column: 1/2;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    #blog-wrapper article .content .thumbnail img {
+        max-height: 300px;
+        width: 100%;
+    }
+
+    #blog-wrapper article .content .para {
+        padding-left: 15px;
+        padding-top: 30px;
+    }
+
+    #comments .comment-form-author,
+    #comments .comment-form-email,
+    #comments .comment-form-url {
+        width: 100%;
+    }
+
+    #comments .form-submit #submit {
+        float: left;
+    }
+}

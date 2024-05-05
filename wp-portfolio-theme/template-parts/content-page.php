@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package WP-Portfolio-Theme
+ * @package DesignFly
  */
 
 ?>
@@ -14,18 +14,16 @@
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
-	<?php wp_portfolio_theme_post_thumbnail(); ?>
+	<?php designfly_post_thumbnail(); ?>
 
 	<div class="entry-content">
 		<?php
 		the_content();
 
-		wp_link_pages(
-			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'wp-portfolio-theme' ),
-				'after'  => '</div>',
-			)
-		);
+		wp_link_pages( array(
+			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'designfly' ),
+			'after'  => '</div>',
+		) );
 		?>
 	</div><!-- .entry-content -->
 
@@ -36,14 +34,14 @@
 				sprintf(
 					wp_kses(
 						/* translators: %s: Name of current post. Only visible to screen readers */
-						__( 'Edit <span class="screen-reader-text">%s</span>', 'wp-portfolio-theme' ),
+						__( 'Edit <span class="screen-reader-text">%s</span>', 'designfly' ),
 						array(
 							'span' => array(
 								'class' => array(),
 							),
 						)
 					),
-					wp_kses_post( get_the_title() )
+					get_the_title()
 				),
 				'<span class="edit-link">',
 				'</span>'

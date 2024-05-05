@@ -4,13 +4,16 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
  *
- * @package WP-Portfolio-Theme
+ * @package DesignFly
  */
 
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
+	<section id="search-wrapper" class="content-area container">
+		<div class="row">
+			<div class="col-md-8">
+		<main id="main" class="site-main">
 
 		<?php if ( have_posts() ) : ?>
 
@@ -18,9 +21,11 @@ get_header();
 				<h1 class="page-title">
 					<?php
 					/* translators: %s: search query. */
-					printf( esc_html__( 'Search Results for: %s', 'wp-portfolio-theme' ), '<span>' . get_search_query() . '</span>' );
+					printf( esc_html__( 'Search Results for: %s', 'designfly' ), '<span>' . get_search_query() . '</span>' );
 					?>
 				</h1>
+
+				<hr class="bar">
 			</header><!-- .page-header -->
 
 			<?php
@@ -33,7 +38,7 @@ get_header();
 				 * If you want to overload this in a child theme then include a file
 				 * called content-search.php and that will be used instead.
 				 */
-				get_template_part( 'template-parts/content', 'search' );
+				get_template_part( 'template-parts/content', 'blog-template' );
 
 			endwhile;
 
@@ -46,8 +51,13 @@ get_header();
 		endif;
 		?>
 
-	</main><!-- #main -->
+		</main><!-- #main -->
+	</div>
+
+	<div class="col-md-4">
+		<?php get_sidebar(); ?>
+	</div>
+	</section><!-- #primary -->
 
 <?php
-get_sidebar();
 get_footer();

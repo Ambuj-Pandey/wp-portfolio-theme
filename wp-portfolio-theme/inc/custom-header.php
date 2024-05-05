@@ -8,39 +8,33 @@
  *
  * @link https://developer.wordpress.org/themes/functionality/custom-headers/
  *
- * @package WP-Portfolio-Theme
+ * @package DesignFly
  */
 
 /**
  * Set up the WordPress core custom header feature.
  *
- * @uses wp_portfolio_theme_header_style()
+ * @uses designfly_header_style()
  */
-function wp_portfolio_theme_custom_header_setup() {
-	add_theme_support(
-		'custom-header',
-		apply_filters(
-			'wp_portfolio_theme_custom_header_args',
-			array(
-				'default-image'      => '',
-				'default-text-color' => '000000',
-				'width'              => 1000,
-				'height'             => 250,
-				'flex-height'        => true,
-				'wp-head-callback'   => 'wp_portfolio_theme_header_style',
-			)
-		)
-	);
+function designfly_custom_header_setup() {
+	add_theme_support( 'custom-header', apply_filters( 'designfly_custom_header_args', array(
+		'default-image'          => '',
+		'default-text-color'     => 'ffffff',
+		'width'                  => 1000,
+		'height'                 => 544,
+		'flex-height'            => false,
+		'wp-head-callback'       => 'designfly_header_style',
+	) ) );
 }
-add_action( 'after_setup_theme', 'wp_portfolio_theme_custom_header_setup' );
+add_action( 'after_setup_theme', 'designfly_custom_header_setup' );
 
-if ( ! function_exists( 'wp_portfolio_theme_header_style' ) ) :
+if ( ! function_exists( 'designfly_header_style' ) ) :
 	/**
 	 * Styles the header image and text displayed on the blog.
 	 *
-	 * @see wp_portfolio_theme_custom_header_setup().
+	 * @see designfly_custom_header_setup().
 	 */
-	function wp_portfolio_theme_header_style() {
+	function designfly_header_style() {
 		$header_text_color = get_header_textcolor();
 
 		/*
@@ -62,9 +56,9 @@ if ( ! function_exists( 'wp_portfolio_theme_header_style' ) ) :
 			.site-description {
 				position: absolute;
 				clip: rect(1px, 1px, 1px, 1px);
-				}
-			<?php
-			// If the user has set a custom color for the text use that.
+			}
+		<?php
+		// If the user has set a custom color for the text use that.
 		else :
 			?>
 			.site-title a,
