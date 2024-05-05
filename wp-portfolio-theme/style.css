@@ -91,3 +91,58 @@ footer {
     padding: 10px 0;
     text-align: center;
 }
+
+
+.pagination_bar {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.pagination_bar .page-numbers {
+    display: inline-block;
+    padding: 8px 12px;
+    margin-right: 5px;
+    border-radius: 4px;
+    background-color: #f0f0f0;
+    color: #333333;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.pagination_bar .page-numbers:hover {
+    background-color: #e0e0e0;
+}
+
+.pagination_bar .page-numbers.current {
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+.pagination_bar .prev,
+.pagination_bar .next {
+    display: inline-block;
+    padding: 8px 12px;
+    margin-right: 5px;
+    border-radius: 4px;
+    background-color: #f0f0f0;
+    color: #333333;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.pagination_bar .prev:hover,
+.pagination_bar .next:hover {
+    background-color: #e0e0e0;
+}
+
+.pagination_bar .prev.disabled,
+.pagination_bar .next.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.pagination_bar .prev i,
+.pagination_bar .next i {
+    margin-right: 5px;
+}
+
