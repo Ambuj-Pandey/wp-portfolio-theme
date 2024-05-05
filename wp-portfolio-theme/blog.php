@@ -20,13 +20,20 @@ get_header();
 
             if ($query->have_posts()) :
                 while ($query->have_posts()) : $query->the_post();
-                    get_template_part('template-parts/content-blog', get_post_format());
+            ?>
+                    <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+                        <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+                        <div class="entry-content">
+                            <?php the_excerpt(); ?>
+                        </div>
+                    </article>
+            <?php
                 endwhile;
 
                 // Reset post data
                 wp_reset_postdata();
             else :
-                get_template_part('template-parts/content-blog', 'none');
+                get_template_part('template-parts/content', 'none');
             endif;
             ?>
         </div><!-- .container -->
@@ -37,8 +44,8 @@ get_header();
     <?php
     echo paginate_links(array(
         'total' => $query->max_num_pages,
-        'prev_text' => __('Previous', 'textdomain'),
-        'next_text' => __('Next', 'textdomain'),
+        'prev_text' => __('Previous', 'WP-Portfolio'),
+        'next_text' => __('Next', 'WP-Portfolio'),
     ));
     ?>
 </div>

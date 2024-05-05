@@ -4,7 +4,7 @@
         <div class="entry-meta">
             <?php
             printf(
-                esc_html__('Posted on %s', 'textdomain'),
+                esc_html__('Posted on %s', 'WP-Portfolio'),
                 '<span class="posted-on">' . get_the_date() . '</span>'
             );
             ?>
@@ -25,7 +25,7 @@
         if (is_singular()) {
             wp_link_pages(
                 array(
-                    'before' => '<div class="page-links">' . esc_html__('Pages:', 'textdomain'),
+                    'before' => '<div class="page-links">' . esc_html__('Pages:', 'WP-Portfolio'),
                     'after' => '</div>',
                 )
             );
